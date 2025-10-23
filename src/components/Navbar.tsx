@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import poaiLogo from "@/assets/poai-logo.png";
+import poaiLogo from "@/assets/poai-logo-optimized.webp";
 
 interface NavbarProps {
   onRegisterClick: () => void;

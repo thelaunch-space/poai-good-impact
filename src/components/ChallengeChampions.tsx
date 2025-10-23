@@ -1,6 +1,6 @@
-import aparnaPortrait from "@/assets/aparna-portrait.jpg";
-import krishnaPortrait from "@/assets/krishna-portrait.jpg";
-import karnPortrait from "@/assets/karn-portrait.jpg";
+import aparnaPortrait from "@/assets/aparna-portrait-optimized.webp";
+import krishnaPortrait from "@/assets/krishna-portrait-optimized.webp";
+import karnPortrait from "@/assets/karn-portrait-optimized.webp";
 
 const ChallengeChampions = () => {
   const champions = [
