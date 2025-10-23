@@ -10,19 +10,6 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-brown-foreground/70">
-            <a href="#" className="hover:text-brown-foreground transition-colors">
-              Privacy
-            </a>
-            <span className="hidden sm:inline">•</span>
-            <a href="#" className="hover:text-brown-foreground transition-colors">
-              Terms
-            </a>
-            <span className="hidden sm:inline">•</span>
-            <a href="#" className="hover:text-brown-foreground transition-colors">
-              Contact
-            </a>
-          </div>
 
           <div className="text-center text-sm text-brown-foreground/60 pt-8 border-t border-brown-foreground/20">
             © 2024 Poai. All rights reserved.

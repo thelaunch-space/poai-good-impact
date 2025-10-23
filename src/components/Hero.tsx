@@ -26,7 +26,7 @@ const Hero = ({ onRegisterClick }: HeroProps) => {
             </div>
             
             <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">
-              Bring technologists, domain experts, founders and creators together to solve local waste challenges.
+              Bringing technologists, domain experts, founders and creators together to solve local waste challenges.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -43,7 +43,7 @@ const Hero = ({ onRegisterClick }: HeroProps) => {
                 className="rounded-full px-10 text-lg border-2 border-brown text-brown hover:bg-brown hover:text-brown-foreground"
                 onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Download Schedule
+                View Schedule
               </Button>
             </div>
           </div>

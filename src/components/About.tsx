@@ -7,7 +7,7 @@ const About = () => {
             About the 'Tech-For-Good' Hackathon
           </h2>
           <p className="text-lg sm:text-xl leading-relaxed text-foreground/80">
-            Through this format we seek to bring together technologists, domain experts, founders and creators amongst others, to help ideate and solve for many of the social challenges we face today. Technology, when leveraged the right way, can help create a more amenable present and future.
+            We bring together diverse talent to use technology and solve social challenges, making a better future possible.
           </p>
         </div>
       </div>
