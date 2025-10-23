@@ -15,18 +15,18 @@ const Hero = ({ onRegisterClick }: HeroProps) => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                Tech-For-Good Hackathon — <span className="text-primary">Poai</span>
+                Tech-For-Good Hackathon <span className="text-primary">by Poai</span>
               </h1>
               <p className="text-2xl sm:text-3xl font-medium text-secondary">
                 Innovate • Connect • Goa
               </p>
               <p className="text-xl text-muted-foreground">
-                15th November, 10am–6pm
+                15th November, 10am-6pm
               </p>
             </div>
             
             <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">
-              Bringing technologists, domain experts, founders and creators together to solve local waste challenges.
+              Bringing technologists, domain experts, founders and creators together to solve local social challenges.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -56,15 +56,6 @@ const Hero = ({ onRegisterClick }: HeroProps) => {
                 className="w-full h-auto object-cover"
                 fetchPriority="high"
               />
-              <div className="absolute top-6 right-6">
-                <Button
-                  onClick={onRegisterClick}
-                  size="lg"
-                  className="rounded-full px-8 shadow-2xl hover:shadow-xl transition-all backdrop-blur-sm"
-                >
-                  Register Now
-                </Button>
-              </div>
             </div>
           </div>
         </div>

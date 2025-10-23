@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import AboutPoai from "@/components/AboutPoai";
 import Focus from "@/components/Focus";
+import WhoThisIsFor from "@/components/WhoThisIsFor";
+import ChallengeChampions from "@/components/ChallengeChampions";
 import ProblemStatements from "@/components/ProblemStatements";
 import HowItWorks from "@/components/HowItWorks";
-import ChallengeChampions from "@/components/ChallengeChampions";
-import AboutPoai from "@/components/AboutPoai";
+import VibeExpect from "@/components/VibeExpect";
 import Schedule from "@/components/Schedule";
 import RegistrationForm from "@/components/RegistrationForm";
 import Footer from "@/components/Footer";
@@ -20,12 +21,13 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar onRegisterClick={handleRegisterClick} />
       <Hero onRegisterClick={handleRegisterClick} />
-      <About />
+      <AboutPoai />
       <Focus />
+      <WhoThisIsFor />
+      <ChallengeChampions />
       <ProblemStatements onRegisterClick={handleRegisterClick} />
       <HowItWorks />
-      <ChallengeChampions />
-      <AboutPoai />
+      <VibeExpect />
       <Schedule />
       <RegistrationForm />
       <Footer />

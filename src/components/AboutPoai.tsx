@@ -4,10 +4,9 @@ const AboutPoai = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">
+            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
               About Poai
             </h2>
-            <div className="text-3xl font-bold text-primary mb-6">Poai</div>
           </div>
           
           <p className="text-lg leading-relaxed text-foreground/80 text-center">

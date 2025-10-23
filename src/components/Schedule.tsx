@@ -1,17 +1,17 @@
 const Schedule = () => {
   const scheduleItems = [
-    { time: "9.30–10.00", event: "Registration" },
-    { time: "10.00–10.15", event: "Introduction to Poai, Hackathon overview" },
-    { time: "10.15–10.30", event: "Speed Networking" },
-    { time: "10.30–11.00", event: "2 Challenge Champions detail out the challenges (Aparna & ...)" },
-    { time: "11.00–11.45", event: "Vibe Coding with Krishna Goutham" },
-    { time: "11.45–12.00", event: "Break" },
-    { time: "12.00–17.00", event: "Hackathon", highlight: true },
-    { time: "15.00–15.30", event: "Challenge Champions Check-in" },
+    { time: "9.30-10.00", event: "Registration" },
+    { time: "10.00-10.15", event: "Introduction to Poai, Hackathon overview" },
+    { time: "10.15-10.30", event: "Speed Networking" },
+    { time: "10.30-11.00", event: "2 Challenge Champions detail out the challenges (Aparna & ...)" },
+    { time: "11.00-11.45", event: "Vibe Coding with Krishna Goutham" },
+    { time: "11.45-12.00", event: "Break" },
+    { time: "12.00-17.00", event: "Hackathon", highlight: true },
+    { time: "15.00-15.30", event: "Challenge Champions Check-in" },
     { time: "17.00", event: "Hackathon ends" },
-    { time: "17.00–17.30", event: "Judging" },
-    { time: "17.30–18.00", event: "Judges announce winners" },
-    { time: "18.00–18.15", event: "Closure & What's Next with Poai" },
+    { time: "17.00-17.30", event: "Judging" },
+    { time: "17.30-18.00", event: "Judges announce winners" },
+    { time: "18.00-18.15", event: "Closure & What's Next with Poai" },
   ];
 
   return (
@@ -23,7 +23,7 @@ const Schedule = () => {
               Schedule
             </h2>
             <p className="text-2xl text-primary font-semibold">
-              15th November, Saturday — 10am to 6pm
+              15th November, Saturday - 10am to 6pm
             </p>
           </div>
 

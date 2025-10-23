@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="text-center space-y-4">
             <div className="text-3xl font-bold">Poai</div>
             <p className="text-brown-foreground/80">
-              Breaking bread over warm conversations
+              Breaking bread over warm conversations about technology
             </p>
           </div>
 

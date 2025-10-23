@@ -1,6 +1,7 @@
 import aparnaPortrait from "@/assets/aparna-portrait-optimized.webp";
 import krishnaPortrait from "@/assets/krishna-portrait-optimized.webp";
 import karnPortrait from "@/assets/karn-portrait-optimized.webp";
+import { Linkedin } from "lucide-react";
 
 const ChallengeChampions = () => {
   const champions = [
@@ -8,19 +9,22 @@ const ChallengeChampions = () => {
       name: "Aparna Bhatnagar Saxena",
       title: "CEO, TORAJAMELO",
       image: aparnaPortrait,
-      bio: "The CEO of TORAJAMELO, she has cemented its identity as a slow ethical lifestyle business, with a BCorp certification, PETA Vegan approved stamp, and Forum Fair Trade Indonesia membership. In 2023 she founded AHANA. She is also the co-founder of Vriksh Impact Partners and the Indonesia Lead of Asia Startup Network.",
+      bio: "The CEO of TORAJAMELO, she has cemented its identity as a slow ethical lifestyle business, with a BCorp certification, PETA Vegan approved stamp, and Forum Fair Trade Indonesia membership. In 2023 she founded AHANA, a showcase of curated ethical brands. She is also the co-founder of Vriksh Impact Partners, a boutique impact investment and advisory firm in India, and the Indonesia Lead of Asia Startup Network.",
+      linkedin: "https://www.linkedin.com/in/aparna-saxena/",
     },
     {
       name: "Krishna Goutham",
       title: "Tech Operator & Product Builder",
       image: krishnaPortrait,
       bio: "He had a remarkably diverse 10-year journey at BYJU'S, starting as a video editor and eventually led 300+ product and curriculum teams. Today he runs tech operations solo for small businesses, ships AI-first MVPs in weeks, and has built 15+ live products using tools like Bolt.new and Claude. He mentors non-technical founders and coaches students building apps for Ivy League admissions.",
+      linkedin: "https://www.linkedin.com/in/krishna-goutham/",
     },
     {
       name: "Karn Malhotra",
       title: "Founder, ThisIsCreativeAi",
       image: karnPortrait,
-      bio: "The founder of ThisIsCreativeAi, his present focus is 'Founder Led Marketing' and 'Leadership Branding' for corporate executives. A 3x founder, his 20+ years of experience includes Marketing, Entrepreneurship & Product Building. He previously ran 9 editions of 'Designothon' — a 1 day design-for-good hackathon impacting 100+ NGOs.",
+      bio: "The founder of ThisIsCreativeAi, his present focus is 'Founder Led Marketing' and 'Leadership Branding' for corporate executives. A 3x founder, his core experience over 20+ years is in Marketing, Entrepreneurship & Product Building. He previously ran 9 editions of 'Designothon' - a 'design for good' initiative to help NGO's in a 1 day hackathon format; impacting 100+ NGO's through 400+ creators. He is also the India lead of Asia Startup Network and now building Poai in Goa.",
+      linkedin: "https://www.linkedin.com/in/karnmalhotra/",
     },
   ];
 
@@ -51,9 +55,19 @@ const ChallengeChampions = () => {
                   />
                 </div>
                 <div className="p-6 space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {champion.name}
-                  </h3>
+                  <div className="flex items-center gap-2">
+                    <a 
+                      href={champion.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:text-primary transition-colors group"
+                    >
+                      <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                        {champion.name}
+                      </h3>
+                      <Linkedin className="w-5 h-5 text-primary" />
+                    </a>
+                  </div>
                   <p className="text-primary font-semibold">{champion.title}</p>
                   <p className="text-foreground/80 leading-relaxed">{champion.bio}</p>
                 </div>

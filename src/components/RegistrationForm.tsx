@@ -28,8 +28,10 @@ const formSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Invalid email address").max(255),
   phone: z.string().min(10, "Valid phone number required"),
-  profession: z.string().optional(),
-  challenge: z.string().min(1, "Please select a challenge"),
+  portfolio: z.string().optional(),
+  aboutYourself: z.string().optional(),
+  aiQuestions: z.string().optional(),
+  challenges: z.array(z.string()).min(1, "Please select at least one challenge"),
   teamName: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
     message: "You must consent to proceed",
@@ -48,8 +50,10 @@ const RegistrationForm = () => {
       name: "",
       email: "",
       phone: "",
-      profession: "",
-      challenge: "",
+      portfolio: "",
+      aboutYourself: "",
+      aiQuestions: "",
+      challenges: [],
       teamName: "",
       consent: false,
     },
@@ -102,7 +106,7 @@ const RegistrationForm = () => {
                 </svg>
               </div>
               <h2 className="text-4xl font-bold text-foreground">
-                Thanks — you're registered!
+                Thanks - you're registered!
               </h2>
               <p className="text-lg text-foreground/80">
                 We'll send a confirmation email with event details & calendar invite.
@@ -183,13 +187,31 @@ const RegistrationForm = () => {
 
                 <FormField
                   control={form.control}
-                  name="profession"
+                  name="portfolio"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-foreground font-semibold">Profession</FormLabel>
+                      <FormLabel className="text-foreground font-semibold">LinkedIn / Github / Portfolio Link *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          placeholder="https://..." 
+                          {...field} 
+                          className="rounded-xl"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="aboutYourself"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground font-semibold">Tell us about yourself and why you'd like to do the hackathon</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Tell us about your profession..." 
+                          placeholder="Tell us about yourself and your interest in this hackathon..." 
                           {...field} 
                           className="rounded-xl min-h-[100px]"
                         />
@@ -201,23 +223,68 @@ const RegistrationForm = () => {
 
                 <FormField
                   control={form.control}
-                  name="challenge"
+                  name="aiQuestions"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-foreground font-semibold">Challenge Options *</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="rounded-xl">
-                            <SelectValue placeholder="Select a challenge" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="fashion-circular">Fashion Waste: Circular Design — Pre-Production & Concept Stage</SelectItem>
-                          <SelectItem value="fashion-postconsumer">Fashion Waste: Post-Consumer Waste Management & Segregation</SelectItem>
-                          <SelectItem value="home-1">Home/Commercial Waste: Option 1</SelectItem>
-                          <SelectItem value="home-2">Home/Commercial Waste: Option 2</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormLabel className="text-foreground font-semibold">Any questions about building solutions with Ai?</FormLabel>
+                      <FormControl>
+                        <Textarea 
+                          placeholder="Share any questions or thoughts about AI solutions..." 
+                          {...field} 
+                          className="rounded-xl min-h-[80px]"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="challenges"
+                  render={() => (
+                    <FormItem>
+                      <div className="mb-4">
+                        <FormLabel className="text-foreground font-semibold">Challenge Options *</FormLabel>
+                      </div>
+                      {[
+                        { id: "fashion-circular", label: "Fashion Waste: Circular Design - Pre-Production & Concept Stage" },
+                        { id: "fashion-postconsumer", label: "Fashion Waste: Post-Consumer Waste Management & Segregation" },
+                        { id: "home-1", label: "Home/Commercial Waste: Option 1" },
+                        { id: "home-2", label: "Home/Commercial Waste: Option 2" },
+                      ].map((item) => (
+                        <FormField
+                          key={item.id}
+                          control={form.control}
+                          name="challenges"
+                          render={({ field }) => {
+                            return (
+                              <FormItem
+                                key={item.id}
+                                className="flex flex-row items-start space-x-3 space-y-0 mb-3"
+                              >
+                                <FormControl>
+                                  <Checkbox
+                                    checked={field.value?.includes(item.id)}
+                                    onCheckedChange={(checked) => {
+                                      return checked
+                                        ? field.onChange([...field.value, item.id])
+                                        : field.onChange(
+                                            field.value?.filter(
+                                              (value) => value !== item.id
+                                            )
+                                          );
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormLabel className="font-normal text-sm cursor-pointer">
+                                  {item.label}
+                                </FormLabel>
+                              </FormItem>
+                            );
+                          }}
+                        />
+                      ))}
                       <FormMessage />
                     </FormItem>
                   )}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import poaiLogo from "@/assets/poai-logo-optimized.webp";
+import poaiLogo from "@/assets/poai-logo-new.png";
 
 interface NavbarProps {
   onRegisterClick: () => void;
@@ -26,12 +26,12 @@ const Navbar = ({ onRegisterClick }: NavbarProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <img src={poaiLogo} alt="Poai Logo" className="h-12" />
+            <img src={poaiLogo} alt="Poai Logo" className="h-10" />
           </div>
           <Button
             onClick={onRegisterClick}
             size="lg"
-            className="rounded-full px-8 shadow-lg hover:shadow-xl transition-all"
+            className="rounded-full px-8 shadow-lg hover:shadow-xl transition-all h-10"
           >
             Register Now
           </Button>

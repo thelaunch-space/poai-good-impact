@@ -9,6 +9,7 @@ const HowItWorks = () => {
     "You'll be introduced to your team on a common mail thread the previous evening; we encourage you to set up your whatsapp group etc.",
     "Choose roles based on the skillset in the group and what you're looking to achieve within the timeframe",
     "Any solutions created should directly address the chosen challenge statement and be something that can be implemented at an individual / company level without needing core govt. or bureaucratic support",
+    "To be considered for the 'winner announcements', all solutions will need to be submitted by 5pm on the day of the hackathon. Any solutions submitted later, while still valuable, won't be eligible for the 'winner announcements'",
   ];
 
   return (

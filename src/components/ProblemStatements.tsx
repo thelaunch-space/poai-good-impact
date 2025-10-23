@@ -15,7 +15,7 @@ const ProblemStatements = ({ onRegisterClick }: ProblemStatementsProps) => {
   const problems = [
     {
       id: "1a",
-      title: "Fashion Waste — Circular Design: Pre-Production & Concept Stage",
+      title: "Fashion Waste - Circular Design: Pre-Production & Concept Stage",
       focus: "Circular design of products or items in the fashion and lifestyle industry.",
       stage: "Right at the design and concept stage.",
       item: "A piece of apparel is being created.",
@@ -24,7 +24,7 @@ const ProblemStatements = ({ onRegisterClick }: ProblemStatementsProps) => {
     },
     {
       id: "1b",
-      title: "Fashion Waste — Post-Consumer Waste Management & Segregation",
+      title: "Fashion Waste - Post-Consumer Waste Management & Segregation",
       focus: "Post-consumer.",
       stage: "",
       item: "",
@@ -34,7 +34,7 @@ const ProblemStatements = ({ onRegisterClick }: ProblemStatementsProps) => {
     },
     {
       id: "2a",
-      title: "Home/Commercial Waste — Challenge 1",
+      title: "Home/Commercial Waste - Challenge 1",
       focus: "Details to be announced",
       stage: "",
       item: "",
@@ -44,7 +44,7 @@ const ProblemStatements = ({ onRegisterClick }: ProblemStatementsProps) => {
     },
     {
       id: "2b",
-      title: "Home/Commercial Waste — Challenge 2",
+      title: "Home/Commercial Waste - Challenge 2",
       focus: "Details to be announced",
       stage: "",
       item: "",
