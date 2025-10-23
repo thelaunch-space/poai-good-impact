@@ -54,6 +54,7 @@ const Hero = ({ onRegisterClick }: HeroProps) => {
                 src={heroBanner}
                 alt="Tech-For-Good Hackathon collaboration"
                 className="w-full h-auto object-cover"
+                fetchPriority="high"
               />
               <div className="absolute top-6 right-6">
                 <Button
