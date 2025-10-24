@@ -31,7 +31,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6 text-center">Supported by</h3>
             <div className="flex justify-center">
               <a href="https://www.asiastartupnetwork.com/" target="_blank" rel="noopener noreferrer">
-                <img src={asnLogo} alt="Asia Startup Network" className="h-25" />
+                <img src={asnLogo} alt="Asia Startup Network" className="h-20" />
               </a>
             </div>
           </div>
