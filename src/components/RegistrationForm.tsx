@@ -24,6 +24,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { Calendar } from "lucide-react";
 
+// Update this with your Make.com webhook URL
+const WEBHOOK_URL = "YOUR_MAKE_COM_WEBHOOK_URL_HERE";
+
 const formSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Invalid email address").max(255),
@@ -64,18 +67,35 @@ const RegistrationForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
     
-    // Simulate form submission - replace with actual Google Sheets integration
     try {
       console.log("Form data:", data);
       
-      // Here you would integrate with Google Sheets via Zapier/Make webhook
-      // Example: await fetch('YOUR_WEBHOOK_URL', { method: 'POST', body: JSON.stringify(data) });
-      
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      // Send data to Make.com webhook
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          portfolio: data.portfolio,
+          attendanceMode: data.attendanceMode,
+          aboutYourself: data.aboutYourself,
+          aiQuestions: data.aiQuestions,
+          challenges: data.challenges,
+          teamName: data.teamName,
+          consent: data.consent,
+          timestamp: new Date().toISOString(),
+        }),
+      });
       
       setIsSubmitted(true);
       toast.success("Registration successful! Check your email for confirmation.");
     } catch (error) {
+      console.error("Webhook error:", error);
       toast.error("Registration failed. Please try again.");
     } finally {
       setIsLoading(false);
