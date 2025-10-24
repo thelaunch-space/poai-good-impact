@@ -29,6 +29,7 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address").max(255),
   phone: z.string().min(10, "Valid phone number required"),
   portfolio: z.string().optional(),
+  attendanceMode: z.string().min(1, "Please select how you'll join"),
   aboutYourself: z.string().optional(),
   aiQuestions: z.string().optional(),
   challenges: z.array(z.string()).min(1, "Please select at least one challenge"),
@@ -51,6 +52,7 @@ const RegistrationForm = () => {
       email: "",
       phone: "",
       portfolio: "",
+      attendanceMode: "",
       aboutYourself: "",
       aiQuestions: "",
       challenges: [],
@@ -198,6 +200,28 @@ const RegistrationForm = () => {
                           className="rounded-xl"
                         />
                       </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="attendanceMode"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground font-semibold">I'll join the hackathon *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="rounded-xl">
+                            <SelectValue placeholder="Select attendance mode" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="in-person">In person</SelectItem>
+                          <SelectItem value="online">Online</SelectItem>
+                        </SelectContent>
+                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}

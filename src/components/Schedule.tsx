@@ -23,7 +23,7 @@ const Schedule = () => {
               Schedule
             </h2>
             <p className="text-2xl text-primary font-semibold">
-              15th November, Saturday - 10am to 6pm
+              15th November, Saturday - 10am to 6.30pm
             </p>
           </div>
 

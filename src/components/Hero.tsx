@@ -21,7 +21,7 @@ const Hero = ({ onRegisterClick }: HeroProps) => {
                 Innovate • Connect • Goa
               </p>
               <p className="text-xl text-muted-foreground">
-                15th November, 10am-6pm
+                15th November, 10am-6.30pm, Offline + Online
               </p>
             </div>
             
