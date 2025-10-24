@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import asnLogo from "@/assets/asn-logo.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -23,10 +24,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-brown text-brown-foreground py-12">
+    <footer className="bg-brown text-brown-foreground py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <div>
+            <h3 className="text-xl font-semibold mb-6 text-center">Supported by</h3>
+            <div className="flex justify-center">
+              <img src={asnLogo} alt="Asia Startup Network" className="h-20" />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <div className="text-3xl font-bold">Poai</div>
               <p className="text-brown-foreground/80">

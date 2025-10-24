@@ -23,7 +23,7 @@ const ChallengeChampions = () => {
       name: "Karn Malhotra",
       title: "Founder, ThisIsCreativeAi",
       image: karnPortrait,
-      bio: "The founder of ThisIsCreativeAi, his present focus is 'Founder Led Marketing' for tech founders and 'Leadership Branding' for corporate executives. A 3x founder, his core experience over 20+ years is in Marketing, Entrepreneurship & Product Building. He previously ran 9 editions of 'Designothon' - a 'design for good' initiative to help NGO's in a 1 day hackathon format; impacting 100+ NGO's through 400+ creators. He is also the India lead of Asia Startup Network and now building Poai in Goa.",
+      bio: "The founder of ThisIsCreativeAi, his present focus is 'Founder Led Marketing' for tech founders and 'Leadership Branding' for corporate executives. A 3x founder, his core experience over 20+ years is in Marketing, Entrepreneurship & Product Building. He previously ran 9 editions of 'Designothon' - a 'design for good' initiative to help NGO's in a 1 day hackathon format; impacting 100+ NGO's through 400+ creators. He is also the India Lead of Asia Startup Network and now building Poai in Goa.",
       linkedin: "https://www.linkedin.com/in/karnmalhotra/",
     },
   ];

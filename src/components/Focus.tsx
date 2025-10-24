@@ -8,7 +8,7 @@ const Focus = () => {
           </h2>
           <div className="grid md:grid-cols-1 gap-8">
             <div className="space-y-4">
-              <p className="text-lg leading-relaxed text-foreground/80">
+              <p className="text-lg leading-relaxed text-foreground/80 text-center">
                 How can we encourage conscious consumerism among tourists and locals to reduce waste (especially during busy seasons) and create year-round, sustainable solutions?
               </p>
             </div>
