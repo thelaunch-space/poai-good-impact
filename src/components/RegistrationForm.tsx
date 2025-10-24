@@ -25,7 +25,7 @@ import { toast } from "sonner";
 import { Calendar } from "lucide-react";
 
 // Update this with your Make.com webhook URL
-const WEBHOOK_URL = "YOUR_MAKE_COM_WEBHOOK_URL_HERE";
+const WEBHOOK_URL = "https://hook.us2.make.com/ic43uwumva7g1ulnwpuz5enmewxvf2li";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
