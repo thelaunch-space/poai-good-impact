@@ -30,13 +30,15 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-6 text-center">Supported by</h3>
             <div className="flex justify-center">
-              <img src={asnLogo} alt="Asia Startup Network" className="h-20" />
+              <a href="https://www.asiastartupnetwork.com/" target="_blank" rel="noopener noreferrer">
+                <img src={asnLogo} alt="Asia Startup Network" className="h-25" />
+              </a>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <div className="text-3xl font-bold">Poai</div>
+              <div className="text-xl font-semibold">Poai</div>
               <p className="text-brown-foreground/80">
                 Breaking bread over warm conversations about technology
               </p>
