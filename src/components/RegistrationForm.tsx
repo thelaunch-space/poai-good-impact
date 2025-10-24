@@ -24,8 +24,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { Calendar } from "lucide-react";
 
-// Update this with your Make.com webhook URL
-const WEBHOOK_URL = "https://hook.us2.make.com/ic43uwumva7g1ulnwpuz5enmewxvf2li";
+const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL;
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
@@ -66,12 +65,16 @@ const RegistrationForm = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
-    
+
     try {
       console.log("Form data:", data);
-      
+
+      if (!WEBHOOK_URL) {
+        throw new Error("Webhook URL is not configured");
+      }
+
       // Send data to Make.com webhook
-      await fetch(WEBHOOK_URL, {
+      const response = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -91,7 +94,7 @@ const RegistrationForm = () => {
           timestamp: new Date().toISOString(),
         }),
       });
-      
+
       setIsSubmitted(true);
       toast.success("Registration successful! Check your email for confirmation.");
     } catch (error) {
