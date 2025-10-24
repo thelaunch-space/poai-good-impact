@@ -74,26 +74,33 @@ const RegistrationForm = () => {
       }
 
       // Send data to Make.com webhook
+      const webhookData = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        portfolio: data.portfolio,
+        attendanceMode: data.attendanceMode,
+        aboutYourself: data.aboutYourself,
+        aiQuestions: data.aiQuestions,
+        challenges: data.challenges,
+        teamName: data.teamName,
+        consent: data.consent,
+        timestamp: new Date().toISOString(),
+      };
+
+      console.log("Sending webhook data:", webhookData);
+
       const response = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors",
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          portfolio: data.portfolio,
-          attendanceMode: data.attendanceMode,
-          aboutYourself: data.aboutYourself,
-          aiQuestions: data.aiQuestions,
-          challenges: data.challenges,
-          teamName: data.teamName,
-          consent: data.consent,
-          timestamp: new Date().toISOString(),
-        }),
+        body: JSON.stringify(webhookData),
       });
+
+      if (!response.ok) {
+        throw new Error(`Webhook failed: ${response.status}`);
+      }
 
       setIsSubmitted(true);
       toast.success("Registration successful! Check your email for confirmation.");
